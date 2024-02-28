@@ -1,4 +1,5 @@
-import VimeoPlayer from 'react-player/vimeo'
+import VimeoPlayer from 'react-player/vimeo';
+import { ElfsightWidget } from 'react-elfsight-widget';
 
 const DEFAULT_CONFIG = {
   youtube: {
@@ -29,6 +30,8 @@ function App() {
     playing: true,
   };
 
+
+
   return (
     <>
       <h1>Текущий вариант:</h1>
@@ -41,6 +44,8 @@ function App() {
       <VimeoPlayer url='https://vimeo.com/916096750' {...presets} />
       <h1>Вариант с React Player c playsinline:</h1>
       <VimeoPlayer url='https://vimeo.com/916096750' {...presets} playsinline />
+      <h1>Виджет:</h1>
+      <ElfsightWidget widgetId="74957d4d-6c18-4418-a695-28c49b69f539" lazy modern />
     </>
   )
 }
